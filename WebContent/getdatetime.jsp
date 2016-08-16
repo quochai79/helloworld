@@ -10,7 +10,7 @@
 </head>
 <body>
 <center>	
-	<h1>Display Current Date and Time</h1>
+	<h1>Xin chao the gioi, toi la Hai. :D</h1>
 </center>
 <%
 	Date date = new Date();
