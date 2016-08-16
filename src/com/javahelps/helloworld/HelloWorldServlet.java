@@ -30,11 +30,19 @@ public class HelloWorldServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String param1 = request.getParameter("param1");
 		GetCurentDayTime get = new GetCurentDayTime();
 		String show = get.GetCurent(getServletName());
 		response.setContentType("text/html");
         PrintWriter printWriter  = response.getWriter();
-        printWriter.print("<p>Hello World, I'm Hai. Today is :" + show + "</p>");
+        if (param1 == null){
+            printWriter.print("<p>Hello World, I'm Hai. Today is :" + show + "</p>");
+
+        }
+        else 
+        {
+        	printWriter.print("<p>Hello World, I'm "+ param1 +" . Today is :" + show + "</p>");
+        }
 	}
 
 	/**
