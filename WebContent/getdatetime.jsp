@@ -1,3 +1,4 @@
+<%@page import="com.sun.org.apache.xalan.internal.xsltc.runtime.Parameter"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -14,7 +15,16 @@
 </center>
 <%
 	Date date = new Date();
-	out.print( "<p>Hello World, I'm Hai. Today is :" + date.toString() + "</p>");
+	String para = request.getParameter("para");
+	if (para == null)
+	{
+		out.print( "<p>Hello World, I'm Hai. Today is :" + date.toString() + "</p>");
+	}
+	else
+	{
+		out.print( "<p>Hello World, I'm " + para +". Today is :" + date.toString() + "</p>");
+
+	}
 //	Date dNow = new Date();
 //	SimpleDateFormat dateFormat = new SimpleDateFormat("E dd/MM/yyyy HH:mm:ss a zzz");
 //	out.print("<h2 align=\"center\">" + dateFormat.format(dNow) + "</h2>" );
