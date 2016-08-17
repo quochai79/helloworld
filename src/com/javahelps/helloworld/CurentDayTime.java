@@ -3,7 +3,7 @@ package com.javahelps.helloworld;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class GetCurentDayTime {
+public class CurentDayTime {
 	public String GetCurent(String showTime){
 		Date date = new Date();
 		 

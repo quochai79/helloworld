@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.javahelps.helloworld.GetCurentDayTime;
+import com.javahelps.helloworld.CurentDayTime;
 
 /**
  * Servlet implementation class HelloWorldServlet
@@ -31,7 +31,7 @@ public class HelloWorldServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String param1 = request.getParameter("param1");
-		GetCurentDayTime get = new GetCurentDayTime();
+		CurentDayTime get = new CurentDayTime();
 		String show = get.GetCurent(getServletName());
 		response.setContentType("text/html");
         PrintWriter printWriter  = response.getWriter();
