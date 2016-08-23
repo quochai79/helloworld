@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script>
+	function Add(){
+		var a = document.getElementById("x").value;
+		var b = document.getElementById("y").value;
+		var d = parseInt(a, "10");
+		var e = parseInt(b, "10");
+		var z = d + e;
+		if(d == isNaN(null) || e == null)
+			{
+				alert("X, Y should not be empty");
+			}
+		else
+		{
+			return document.getElementById("result").value = + z;
+			
+		} 
+	}
+	function Subtract(){
+		var a = document.getElementById("x").value;
+		var b = document.getElementById("y").value;
+		var d = parseInt(a, "10");
+		var e = parseInt(b, "10");
+		var z = d - e;
+		if(a == null || b == null)
+		{
+			alert("X, Y should not be empty");
+		}
+		else
+		{
+			return document.getElementById("result").value = + z;	
+		}
+	}
+	
+	function Multiply(){
+		var a = document.getElementById("x").value;
+		var b = document.getElementById("y").value;
+		var d = parseInt(a, "10");
+		var e = parseInt(b, "10");
+		var z = d * e;
+		if(a == null || b == null)
+		{
+			alert("X, Y should not be empty");
+		}
+		else
+		{
+			return document.getElementById("result").value = + z;	
+		}
+	}
+	
+	function Divide(){
+		var a = document.getElementById("x").value;
+		var b = document.getElementById("y").value;
+		var c = a / b;
+		var d = parseInt(a, "10");
+		var e = parseInt(b, "10");
+		var z = d / e;
+		if(a == null || b == null)
+		{
+			alert("X, Y should not be empty");
+		}
+		else
+		{
+			return document.getElementById("result").value = + z;	
+		}
+	}
+ 		function onClick(){
+			var idSelect = document.getElementById("ddWiew").value;
+			if(idSelect == "add"){
+				Add();
+			}
+			else if(idSelect == "subtract"){
+				Subtract();
+			}
+			else if( idSelect =="multiply"){
+				Multiply();
+			}
+			else if(idSelect == "divide"){
+				Divide();
+			}
+	} 
+</script>
+<body>
+<form action="script_code.html">
+	X : <input type="number" id="x"><br>
+	Y : <input type="number" id="y"><br>
+	Result: <input id="result"><br>
+</form>
+<select id="ddWiew">
+		<option value="add">Add</option>
+		<option value="subtract">Subtract</option>
+		<option value="multiply">Multiply</option>
+		<option value="divide">Divide</option>
+</select>
+	<button type="button" onclick="onClick()">Submit</button>
+
+</body>
+</html>
